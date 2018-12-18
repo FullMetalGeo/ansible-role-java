@@ -14,3 +14,9 @@
   apt:
     name: "{{ java_packages }}"
     state: present
+
+- name: Select java version
+  alternatives:
+    name: java
+    path: "{{ java_home }}"
+  when: java_home is defined
