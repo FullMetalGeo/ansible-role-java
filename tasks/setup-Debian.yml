@@ -18,5 +18,5 @@
 - name: Select java version
   alternatives:
     name: java
-    path: "{{ java_home }}"
+    path: "{{ java_home }}/bin"
   when: java_home is defined
